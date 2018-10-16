@@ -3,6 +3,7 @@
 /out
 /gradle
 /.gradle
+*.iml
 
 gradlew
-gradlew.bat
+gradlew.
