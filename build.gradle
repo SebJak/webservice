@@ -1,4 +1,4 @@
-group 'com.sjk.training'
+group 'com.sjk.webservice'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
@@ -15,5 +15,7 @@ dependencies {
 
     testImplementation('org.springframework.boot:spring-boot-starter-test:2.0.5.RELEASE')
 //    testImplementation('org.springframework.security:spring-security-test:5.1.1.RELEASE')
+    implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.2'
+
     testImplementation group: 'junit', name: 'junit', version: '4.12'
 }
