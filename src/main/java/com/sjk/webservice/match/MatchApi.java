@@ -1,21 +1,18 @@
 package com.sjk.webservice.match;
 
-import java.util.Collections;
-import java.util.List;
-
-public class MatchApi {
+abstract class MatchApi {
 
     private IRepository<Match> repository;
 
-    public MatchApi(IRepository repository) {
+    MatchApi(IRepository<Match> repository) {
         this.repository = repository;
     }
 
-    public List<Match> readMatches() {
-        return Collections.emptyList();
+    Matches readMatches() {
+        return Matches.builder().matches(repository.findAll()).build();
     }
 
-    public void save(Match item) {
+    void save(Match item) {
         repository.save(item);
     }
 }
